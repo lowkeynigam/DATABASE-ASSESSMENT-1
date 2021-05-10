@@ -82,14 +82,23 @@ INSERT INTO TOUR (TourName,Descriotion) VALUES
 ('West','Tour of wineries and outlets of the Geelong and Otways region');
 
 --Task 4 Query 1
-    -- SELECT GivenName, Surname, BOOKING.TourName, Descriotion,EventYear,EventMonth,DateBooked,EventFee
+    -- SELECT GivenName, Surname, BOOKING.TourName, Descriotion,BOOKING.EventYear,BOOKING.EventMonth,DateBooked,EventFee
     -- FROM CLIENT, BOOKING, EVENT, TOUR
 --Task 4 Query 2
     --SELECT EventMonth,TourName, COUNT(*) AS "NUM OF BOOKINGS"
     --FROM BOOKING
     --GROUP BY EventMonth,TourName
 --Task 4 Query 3
-    SELECT * FROM BOOKING
-    GROUP BY Payment
-    HAVING
-        Payment > AVG(Payment)
+   --skipping because too tough
+--Skipping Task 5 because I don't know how to create a view
+--Task 6 
+    --Query 1
+        -- SELECT * FROM CLIENT
+        -- SELECT COUNT(ClientID) AS 'COUNT OF CLIENTS' FROM CLIENT
+    --Query 2 
+        -- SELECT * FROM BOOKING SELECT COUNT(BOOKING.DateBooked) AS 'COUNT OF BOOKINGS'
+        -- FROM BOOKING
+    
+        --The proof for query one displays the number of clients in the client table which proves that my query is displaying accurate results
+        --The proof for query two shows the Count of Values in the DateBooked Columnn, which is a simple way to show that I do not have an odd number of columns in my query
+        

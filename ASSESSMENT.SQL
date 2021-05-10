@@ -69,7 +69,7 @@ INSERT INTO BOOKING (ClientID,TourName, EventMonth, EventDay, EventYear, Payment
 ('2', 'West', 'Jan', '29','2016','225', '2015-12-17'),
 ('3', 'West', 'Jan', '29','2016','200', '2015-12-18');
 
-INSERT INTO EVENTT (TourName,EventMonth,EventDay,EventYear,EventFee) VALUES
+INSERT INTO EVENT (TourName,EventMonth,EventDay,EventYear,EventFee) VALUES
 ('North', 'Jan', '9', '2016', '200'),
 ('North', 'Feb', '13', '2016', '225'),
 ('South', 'Jan', '9', '2016', '200'),
@@ -81,4 +81,15 @@ INSERT INTO TOUR (TourName,Descriotion) VALUES
 ('South','Tour of wineries and outlets of Mornington Penisula'),
 ('West','Tour of wineries and outlets of the Geelong and Otways region');
 
-Select * FROM CLIENT
+--Task 4 Query 1
+    -- SELECT GivenName, Surname, BOOKING.TourName, Descriotion,EventYear,EventMonth,DateBooked,EventFee
+    -- FROM CLIENT, BOOKING, EVENT, TOUR
+--Task 4 Query 2
+    --SELECT EventMonth,TourName, COUNT(*) AS "NUM OF BOOKINGS"
+    --FROM BOOKING
+    --GROUP BY EventMonth,TourName
+--Task 4 Query 3
+    SELECT * FROM BOOKING
+    GROUP BY Payment
+    HAVING
+        Payment > AVG(Payment)
